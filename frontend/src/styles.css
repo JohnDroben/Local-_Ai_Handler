@@ -1,0 +1,28 @@
+:root{
+  --bg:#f5efe6; /* old paper beige */
+  --card:#fff8f0;
+  --accent:#7a3f28; /* chestnut */
+  --muted:#8b6b5a; /* wood-ish */
+  --shadow: rgba(0,0,0,0.08);
+}
+*{box-sizing:border-box}
+body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: linear-gradient(180deg, var(--bg), #efe6d8); color: #3b2a21; margin:0;}
+.page{min-height:100vh; display:flex; flex-direction:column}
+.header{padding:40px 24px; text-align:center; background-image: url('/paper-texture.png'); background-size:cover}
+.header h1{font-size:28px; margin:0; color:var(--accent)}
+.subtitle{color:var(--muted); margin-top:6px}
+.container{display:grid; grid-template-columns:1fr 1fr; gap:24px; padding:24px}
+.card{background:var(--card); padding:18px; border-radius:10px; box-shadow:0 6px 18px var(--shadow); border:1px solid rgba(122,63,40,0.06)}
+.form{display:flex; gap:12px; margin-top:12px}
+input[type=text], input{padding:10px 12px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); flex:1}
+button{background:var(--accent); color:white; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; box-shadow:0 4px 8px rgba(122,63,40,0.18)}
+.loader{margin-top:12px; color:var(--muted)}
+.error{margin-top:12px; color:#9b2b2b}
+.result{margin-top:12px}
+.results-table{width:100%; border-collapse:collapse; margin-top:12px}
+.results-table th, .results-table td{border:1px solid rgba(0,0,0,0.04); padding:8px}
+.footer{padding:14px; text-align:center; color:var(--muted)}
+
+/* Soft animations */
+.card{transform-origin:top left; transition:transform .18s ease, box-shadow .18s ease}
+.card:hover{transform:translateY(-6px); box-shadow:0 18px 40px rgba(0,0,0,0.08)}

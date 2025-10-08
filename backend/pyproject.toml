@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "local-name-handler-backend"
+version = "0.1.0"
+description = "Backend for Local Name Handler MVP"
+authors = ["Local Dev <dev@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.100.0"
+uvicorn = {extras = ["standard"], version = "^0.22.0"}
+httpx = "^0.24.0"
+pydantic = "^2.5.1"
+python-multipart = "^0.0.6"
+pandas = "^2.2.0"
+
+[tool.poetry.scripts]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
